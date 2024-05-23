@@ -5,7 +5,7 @@
   "description": "Generates random statements as placeholder text using Lorem AI",
   "type": "module",
   "scripts": {
-    "dev": "bun watch main.ts",
+    "dev": "bun --watch main.ts",
     "publish": "bunx jsr publish"
   },
   "devDependencies": {
@@ -18,5 +18,5 @@
     "@deejaydev/lorem-ai": "npm:@jsr/deejaydev__lorem-ai",
     "@google/generative-ai": "^0.11.4"
   },
-  "author": "Danjuma Ashiwaju"
+  "author": "Danjuma (@deejaydev) Ashiwaju"
 }

@@ -2,9 +2,9 @@
 
 A lightweight package that provides a Generative AI approach to lorem ipsum. The package will generate natural language placeholder text.
 
-##### ⚠️Note
+##### 📢 Important Note
 
-**For now, you MUST use the Google Gemini API key. 👉🏽 Get it from this page of [Google Docs](https://ai.google.dev/gemini-api/docs/api-key).**
+**For now, you ONLY use the Google Gemini API key. 👉🏽 Get it from this page of [Google Docs](https://ai.google.dev/gemini-api/docs/api-key).**
 
 ## Usage:
 

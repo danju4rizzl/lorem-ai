@@ -30,7 +30,7 @@ export async function generateSentence(
   const model = genAI.getGenerativeModel({ model: MODEL_NAME })
 
   const generationConfig = {
-    temperature: 0.3,
+    temperature: 1,
     topK: 64,
     topP: 0.95,
     maxOutputTokens: 1192
@@ -61,16 +61,6 @@ export async function generateSentence(
     },
     { text: 'count : Give me a sentence with 3 words' },
     { text: 'sentence : {"sentence": "Welcome Back Home"}' },
-    { text: 'count : Give me a sentence with 6 words' },
-    { text: 'sentence : {"sentence": "Did you know that people next "}' },
-    { text: 'count : Give me a sentence with 16 words' },
-    {
-      text: 'sentence : {"sentence": "We are assistant can help you manage tasks, schedule appointments, and provide valuable information.\n"}'
-    },
-    { text: 'count : Give me a sentence with 25 words' },
-    {
-      text: 'sentence : {"sentence": "Introducing our innovative product designed to simplify your daily routine, providing efficiency, convenience, and style in one compact package for all your needs."}'
-    },
     { text: `count : Give me a sentence with ${length} words` },
     { text: 'sentence :' }
   ]
