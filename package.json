@@ -1,7 +1,7 @@
 {
   "name": "lorem-ai",
   "module": "main.ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generates random statements as placeholder text using Lorem AI",
   "type": "module",
   "scripts": {
@@ -15,6 +15,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@deejaydev/lorem-ai": "npm:@jsr/deejaydev__lorem-ai",
     "@google/generative-ai": "^0.11.4"
   },
   "author": "Danjuma Ashiwaju"

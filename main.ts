@@ -5,12 +5,16 @@ import {
 } from '@google/generative-ai'
 
 const MODEL_NAME = 'gemini-1.5-flash-latest'
-// const API_KEY = process.env.GEMINI_API_KEY
 
 /**
+ * A package to generates random statements as placeholder text using Lorem AI.
  *
- * @param geminiApiKey Your Google Gemini API key.
- * @param length The amount of words you want to generate.
+ */
+
+/**
+ * Generate random sentence.
+ * @param geminiApiKey Your Google Gemini API key 🔑.
+ * @param length The amount of words you want to generate 🔄.
  * @returns A promise that resolves to a string.
  */
 
@@ -19,7 +23,7 @@ export async function generateSentence(
   length: number
 ): Promise<string> {
   if (!geminiApiKey) {
-    throw new Error('API key is required')
+    throw new Error('🗝️ Your Google Gemini API key is required')
   }
 
   const genAI = new GoogleGenerativeAI(geminiApiKey)
@@ -82,17 +86,6 @@ export async function generateSentence(
   if (response.usageMetadata?.totalTokenCount) {
     return response.text()
   } else {
-    throw new Error('Failed to generate sentence')
+    throw new Error('Failed to generate sentence 🔴')
   }
 }
-
-// async function run() {
-//   try {
-//     const sentence = await generateSentence(API_KEY as string, 10)
-//     console.log(sentence)
-//   } catch (error) {
-//     console.error('Error generating sentence:', error)
-//   }
-// }
-
-// run()
