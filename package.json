@@ -1,0 +1,17 @@
+{
+  "name": "lorem-ai",
+  "module": "main.ts",
+  "version": "0.1.0",
+  "description": "Generates random statements as placeholder text using Lorem AI",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.11.4"
+  },
+  "author": "Danjuma Ashiwaju"
+}
