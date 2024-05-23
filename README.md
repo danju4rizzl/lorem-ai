@@ -1,4 +1,4 @@
-# lorem-ai
+## lorem-ai
 
 A lightweight package to generate placeholder text using artificial intelligence. The package can produce placeholder text that closely resembles natural language different parameters.
 

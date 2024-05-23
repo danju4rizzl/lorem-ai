@@ -4,6 +4,10 @@
   "version": "0.1.0",
   "description": "Generates random statements as placeholder text using Lorem AI",
   "type": "module",
+  "scripts": {
+    "dev": "bun watch main.ts",
+    "publish": "bunx jsr publish"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
