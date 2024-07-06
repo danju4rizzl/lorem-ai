@@ -30,7 +30,7 @@ export async function generateSentence(
   const model = genAI.getGenerativeModel({ model: MODEL_NAME })
 
   const generationConfig = {
-    temperature: 1,
+    temperature: 0.6,
     topK: 64,
     topP: 0.95,
     maxOutputTokens: 1192

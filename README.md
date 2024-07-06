@@ -1,35 +1,46 @@
-# Lorem AI 🤖
+## Lorem AI 🤖
 
-A lightweight package that provides a Generative AI approach to lorem ipsum. The package will generate natural language placeholder text.
+A lightweight package that provides a Generative AI approach to lorem ipsum. The package will generate natural language placeholder text `string` for JavaScript.
 
-##### 📢 Important Note
+#### 📢 Heads up!!!
 
-**For now, you ONLY use the Google Gemini API key. 👉🏽 Get it from this page of [Google Docs](https://ai.google.dev/gemini-api/docs/api-key).**
+**For now, the lib only uses the Google Gemini API key.**
+You can get your API key here 👉🏽 [Google Docs](https://ai.google.dev/gemini-api/docs/api-key).
 
-## Usage:
+#### Installation: ⬇️
+
+Works with any JavaScript Package Manager, with a node_modules folder.
 
 ```bash
-# Bun (use any of bunx, npx, yarn dlx, or pnpm dlx)
+
+# Bun 🔥
 bunx jsr add @deejaydev/lorem-ai
 
-# Deno
+# or
+
+# Deno 🚤
 deno add @deejaydev/lorem-ai
+
+# Traditional 👴
+pnpm dlx jsr add @deejaydev/lorem-ai
 ```
 
-After adding the package in your project, you can import and use it in ES modules:
+#### Usage: ⚙️
+
+After adding the package in your project, you can import and use it in ES modules.
 
 ```ts
 ...
 import { generateSentence } from '@deejaydev/lorem-ai'
 
-
 // top level await
 await generateSentence('ADD_YOUR_API_KEY_HERE', 7)
 ...
-
 ```
 
-Heres a Full example you in a `ts` project
+#### Code example: 🦖
+
+Here's a full example you can use in a `TypeScript` project.
 
 ```ts
 import { generateSentence } from '@deejaydev/lorem-ai'
