@@ -72,9 +72,10 @@ export async function generateSentence(
   })
 
   const response = result.response
-
   if (response.usageMetadata?.totalTokenCount) {
-    return response.text()
+    const { sentence } = JSON.parse(response.text())
+
+    return sentence
   } else {
     throw new Error('Failed to generate sentence 🔴')
   }
