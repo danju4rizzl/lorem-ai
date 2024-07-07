@@ -80,3 +80,5 @@ export async function generateSentence(
     throw new Error('Failed to generate sentence 🔴')
   }
 }
+
+// TODO: Deejay you need to setup a CI for publishing
