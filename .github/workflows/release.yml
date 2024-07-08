@@ -1,0 +1,36 @@
+# .github/workflows/publish.yml
+
+name: release
+
+on:
+  push:
+    branches: [main, next]
+    paths-ignore:
+      - '.env'
+      - 'README.md'
+      - '.gitignore'
+
+jobs:
+  jsr:
+    name: publish-to-jsr
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write # The OIDC ID token is used for authentication with JSR.
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: '1.1.16'
+
+      - name: publish package to jsr
+        run: bunx run publish
