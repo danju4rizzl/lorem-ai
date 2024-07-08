@@ -15,7 +15,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@deejaydev/lorem-ai": "npm:@jsr/deejaydev__lorem-ai",
     "@google/generative-ai": "^0.11.4"
   },
   "author": "Danjuma (@deejaydev) Ashiwaju"
