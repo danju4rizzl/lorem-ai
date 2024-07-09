@@ -18,5 +18,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Check for uncommitted changes
+        run: git status
+
+      - name: Stage and Commit changes if necessary
+        run: |
+          git add .
+          git commit -m "Committing changes"
+
       - name: Publish package
-        run: npx jsr publish
+        run: npx jsr publish --allow-dirty
