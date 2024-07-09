@@ -81,3 +81,5 @@ export async function generateSentence(
 }
 
 // TODO: Deejay you need to setup a CI for publishing
+// const getSentence = await generateSentence(`${Bun.env.GEMINI_API_KEY}`, 3)
+// console.log(getSentence)
