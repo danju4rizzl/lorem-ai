@@ -12,13 +12,13 @@ const MODEL_NAME = 'gemini-1.5-flash-latest'
  */
 
 /**
- * Generate random sentence.
+ * Generate specified number random words as a sentence for placeholder text .
  * @param geminiApiKey Your Google Gemini API key 🔑.
  * @param length The amount of words you want to generate 🔄.
- * @returns A promise that resolves to a string.
+ * @returns A `string` of random words in the specified length 📝.
  */
 
-export async function generateSentence(
+export async function loremAI(
   geminiApiKey: string,
   length: number
 ): Promise<string> {
@@ -74,12 +74,12 @@ export async function generateSentence(
   const response = result.response
 
   if (response.usageMetadata?.totalTokenCount) {
-    return JSON.parse(response.text())
+    const aiText = JSON.parse(response.text())
+    return aiText.sentence
   } else {
     throw new Error('Failed to generate sentence 🔴')
   }
 }
 
-// TODO: Deejay you need to setup a CI for publishing
-// const getSentence = await generateSentence(`${Bun.env.GEMINI_API_KEY}`, 3)
-// console.log(getSentence)
+// const genWords = await loremAI(`${Bun.env.GEMINI_API_KEY}`, 5)
+// console.log(genWords) //The cat chased the mouse.

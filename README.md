@@ -1,56 +1,55 @@
 ## Lorem AI 🤖
 
-A lightweight package that provides a Generative AI approach to lorem ipsum. The package will generate natural language placeholder text `string` for JavaScript.
+A lightweight package that provides a Generative AI approach to lorem ipsum. The package will generate natural language placeholder word/sentence `string` for any JavaScript runtime.
 
-#### 📢 Heads up!!!
+**📢 Heads up!!!**
 
 **For now, the lib only uses the Google Gemini API key.**
 You can get your API key here 👉🏽 [Google Docs](https://ai.google.dev/gemini-api/docs/api-key).
 
-#### Installation: ⬇️
+**⬇️ Installation:**
 
-Works with any JavaScript Package Manager, with a node_modules folder.
+Works with any JavaScript Package Manager, with a `node_modules` folder.
 
 ```bash
 
 # Bun 🔥
 bunx jsr add @deejaydev/lorem-ai
 
-# or
-
 # Deno 🚤
 deno add @deejaydev/lorem-ai
 
-# Traditional 👴
+# pnpm, npm, yarn 👴
 pnpm dlx jsr add @deejaydev/lorem-ai
 ```
 
-#### Usage: ⚙️
+**⚙️ Usage:**
 
 After adding the package in your project, you can import and use it in ES modules.
 
 ```ts
+import { loremAI } from '@deejaydev/lorem-ai'
 ...
-import { generateSentence } from '@deejaydev/lorem-ai'
 
-// top level await
-await generateSentence('ADD_YOUR_API_KEY_HERE', 7)
+const genWords = await loremAI('YOUR_GEMINI_API_KEY', 5)
+console.log(genWords) //The cat chased the mouse.
+
 ...
 ```
 
-#### Code example: 🦖
+**🦖 Code example:**
 
-Here's a full example you can use in a `TypeScript` project.
+Here's a full example you can use in a [Bun](https://bun.sh/) project.
 
 ```ts
-import { generateSentence } from '@deejaydev/lorem-ai'
+import { loremAI } from '@deejaydev/lorem-ai'
 
-const API_KEY = process.env.GEMINI_API_KEY
+const API_KEY = Bun.env.GEMINI_API_KEY
 
 async function run() {
   try {
-    const sentence = await generateSentence(API_KEY as string, 50)
-    console.log(sentence)
+    const sentence = await loremAI(API_KEY, 50)
+    console.log(sentence) // random sentence with 50 words
   } catch (error) {
     console.error('Error generating sentence:', error)
   }
