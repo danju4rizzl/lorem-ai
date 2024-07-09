@@ -24,4 +24,4 @@ jobs:
           deno-version: v1.x
 
       - name: Publish to JSR
-        run: deno jsr publish
+        run: deno publish
