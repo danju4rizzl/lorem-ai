@@ -12,7 +12,7 @@ const MODEL_NAME = 'gemini-1.5-flash-latest'
  */
 
 /**
- * Generate specified number random words as a sentence for placeholder text .
+ * Generate a random sentence as placeholder text.
  * @param geminiApiKey Your Google Gemini API key 🔑.
  * @param length The amount of words you want to generate 🔄.
  * @returns A `string` of random words in the specified length 📝.

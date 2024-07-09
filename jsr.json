@@ -1,6 +1,6 @@
 {
   "name": "@deejaydev/lorem-ai",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "exports": "./main.ts",
   "publish": {
     "include": ["jsr.json", "README.md", "LICENSE", "main.ts"]
